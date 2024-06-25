@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
 
-        searchByName("super")
+        searchByName("a")
     }
 
     private fun searchByName(query: String){
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun getRetrofit(): Retrofit {
         /*val interceptor = HttpLoggingInterceptor()
         interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC)
