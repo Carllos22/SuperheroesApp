@@ -1,5 +1,6 @@
 package com.example.superheroesapp.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Toast
@@ -59,7 +60,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToDetail(superhero: Superhero) {
-        Toast.makeText(this, superhero.name, Toast.LENGTH_SHORT).show()
+        //Comentaremos el Toast para imprementar la variable "intent"
+        //Toast.makeText(this, superhero.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DetailActivity::class.java)
+        startActivity(intent)
     }
 
     private fun searchByName(query: String){
