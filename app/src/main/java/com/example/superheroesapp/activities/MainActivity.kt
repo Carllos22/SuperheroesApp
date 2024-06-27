@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         //Comentaremos el Toast para imprementar la variable "intent"
         //Toast.makeText(this, superhero.name, Toast.LENGTH_SHORT).show()
         val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("SUPERHERO_ID", superhero.id)
         startActivity(intent)
     }
 
